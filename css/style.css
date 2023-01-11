@@ -1,72 +1,71 @@
 body {
-    background-color: rgba(235, 246, 186, 0.846);
+  background-color: rgba(235, 246, 186, 0.846);
 }
 
 header {
-    width: 100%;
-    height: 63px;
-    margin-top: 50px;
-    font-family: 'Roboto', sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
+  width: 100%;
+  height: 63px;
+  margin-top: 50px;
+  font-family: "Roboto", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 header h1 {
-    font-family: 'Roboto', sans-serif;
-    font-weight: 700;
-    font-size: 56px;
-    line-height: 65.63px;
-    color: #75B79E;
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-size: 56px;
+  line-height: 65.63px;
+  color: #75b79e;
 }
 
 main {
-    width: 100%;
-    margin-top: 50px;
-    background-color: pink;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  width: 100%;
+  margin-top: 50px;
+  background-color: pink;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .card {
-    width: 200px;
-    height: 250px;
-    position: relative;
-  }
+  width: 200px;
+  height: 250px;
+  position: relative;
+}
 
-  .face {
-    width: 100%;
-    height: 100%;
-    background-color: #A7E9AF;
-    border-radius: 10px;
-    box-shadow: 1px 1px 1px rgba(0,0,0,.3);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: absolute;
-    backface-visibility: hidden;
-    transition: all .5s;
-    transform-style: preserve-3d;
-  }
+.face {
+  width: 100%;
+  height: 100%;
+  background-color: #a7e9af;
+  border-radius: 10px;
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  backface-visibility: hidden;
+  transition: all 0.5s;
+  transform-style: preserve-3d;
+}
 
-  .back-face {
-    transform: rotateY(180deg);
-  }
+.back-face {
+  transform: rotateY(180deg);
+}
 
-  .card:hover .back-face {
-    transform: rotateY(0deg);
-  }
+.card:hover .back-face {
+  transform: rotateY(0deg);
+}
 
-  .card:hover .front-face {
-    transform: rotateY(-180deg);
-  }
+.card:hover .front-face {
+  transform: rotateY(-180deg);
+}
 
-  .front-face img {
-    width: 100%;
-  }
+.front-face img {
+  width: 100%;
+}
 
-  .back-face img {
-    width: 100%;
-  }
+.back-face img {
+  width: 100%;
+}
