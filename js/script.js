@@ -7,14 +7,20 @@ const gifts = [
     `<img src="/img/pooh.gif">`,
     `<img src="/img/spinner.gif">`,
     `<img src="/img/sticker.gif">`,
+    `<img src="/img/bird.gif">`
 ];
 
 let counter = 0;
 
-const listLetters = document.querySelector('.card');
+let selectedStatus = false;
+
+let chosenLetter = null;
+
+let equalLetter = []
+
+let amountLetters = null;
 
 function startGame() {
-
     let amountLetters = parseInt(prompt(`🔹 Com quantas cartas deseja jogar?
     🔺 Obs: Digite um número par entre 4 e 14!`));
 
@@ -33,7 +39,7 @@ function startGame() {
     for (let i = 0; i < amountLetters; i++) {
         const box = document.querySelector('.box-cards');
         box.innerHTML += `
-        <div class="card" onclick="turn(this)">
+        <div class="card" onclick="clickLetter(this)">
             <div class="front-face face">
                 <img src="img/back.png">
             </div>
@@ -49,3 +55,36 @@ function randomL() {
 }
 
 startGame()
+
+function clickLetter(card) {
+    const backFace = card.querySelector('.back-face');
+
+    if (backFace.classList.contains('.selected') === false) {
+        spinLetter(card);
+        counter++;
+
+        if (selectedStatus === false) {
+            chosenLetter = card;
+            selectedStatus = true;
+        }
+
+        else if (chosenLetter.classList[1] !== card.classList[1]) {
+            selectedStatus = false;
+            setTimeout(spinLetter, 1000, chosenLetter);
+            setTimeout(spinLetter, 1000, card);
+            chosenLetter = null;
+        }
+
+        else {
+            selectedStatus = false;
+            equalLetter.push(card.classList[1]);
+        }
+    }
+}
+
+function spinLetter(card) {
+    const frontFace = card.querySelector('.front-face');
+    frontFace.classList.toggle('selected-front');
+    const backFace = card.querySelector('.back-face');
+    backFace.classList.toggle('selected-back');
+}

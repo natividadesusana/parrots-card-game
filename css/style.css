@@ -42,12 +42,7 @@ main {
   height: 146px;
   margin: 20px;
   position: relative;
-}
-
-.card img {
-  width: 100px;
-  height: 100px;
-  margin: 10px;
+  cursor: pointer;
 }
 
 .face {
@@ -70,18 +65,28 @@ main {
   transform: rotateY(180deg);
 }
 
-.card:hover .back-face {
+.selected-back  {
+  transform: rotate(0deg);
+}
+
+.selected-front  {
+  transform: rotateY(-180deg);
+}
+
+/* .card:hover .back-face {
   transform: rotateY(0deg);
 }
 
 .card:hover .front-face {
   transform: rotateY(-180deg);
-}
+} */
 
 .front-face img {
-  width: 100%;
+  height: 100px;
+  margin: 10px;
 }
 
 .back-face img {
-  width: 100%;
+  height: 100px;
+  margin: 10px;
 }
