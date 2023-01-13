@@ -1,13 +1,13 @@
 const cards = [];
 
 const gifts = [
-    `<img src="/img/christmas.gif">`,
-    `<img src="/img/discord.gif">`,
-    `<img src="/img/ghibli.gif">`,
-    `<img src="/img/pooh.gif">`,
-    `<img src="/img/spinner.gif">`,
-    `<img src="/img/sticker.gif">`,
-    `<img src="/img/bird.gif">`
+    `<img data-test="face-down-image" src="/img/christmas.gif">`,
+    `<img data-test="face-down-image" src="/img/discord.gif">`,
+    `<img data-test="face-down-image" src="/img/ghibli.gif">`,
+    `<img data-test="face-down-image" src="/img/pooh.gif">`,
+    `<img data-test="face-down-image" src="/img/spinner.gif">`,
+    `<img data-test="face-down-image" src="/img/sticker.gif">`,
+    `<img data-test="face-down-image" src="/img/bird.gif">`
 ];
 
 let counter = 0;
@@ -20,7 +20,10 @@ let equalLetter = []
 
 let amountLetters = null;
 
+let amountPairs = null;
+
 function startGame() {
+   
     let amountLetters = parseInt(prompt(`🔹 Com quantas cartas deseja jogar?
     🔺 Obs: Digite um número par entre 4 e 14!`));
 
@@ -28,20 +31,22 @@ function startGame() {
         amountLetters = parseInt(prompt(`🔺 Atenção!!
     ➡️ Digite um número par entre 4 e 14!`));
     };
+    
+    gifts.sort(randomLetters);
 
     for (let i = 0; i < (amountLetters / 2); i++) {
         cards.push(gifts[i], gifts[i]);
     };
-
-    gifts.sort(randomL);
-    cards.sort(randomL);
+  
+    amountPairs = amountLetters/2;
+    cards.sort(randomLetters);
 
     for (let i = 0; i < amountLetters; i++) {
         const box = document.querySelector('.box-cards');
         box.innerHTML += `
-        <div class="card" onclick="clickLetter(this)">
+        <div data-test="card" class="card" onclick="clickLetter(this)">
             <div class="front-face face">
-                <img src="img/back.png">
+                <img data-test="face-up-image" src="img/back.png">
             </div>
             <div class="back-face face">
                 ${cards[i]}
@@ -50,7 +55,7 @@ function startGame() {
     }
 }
 
-function randomL() {
+function randomLetters() {
     return Math.random() - 0.5;
 }
 
@@ -58,26 +63,31 @@ startGame()
 
 function clickLetter(card) {
     const backFace = card.querySelector('.back-face');
-
-    if (backFace.classList.contains('.selected') === false) {
+    
+    if (counter == 0) {
+        time = setInterval(timeCounter, 1000);
+    }
+    if (backFace.classList.contains('.selected-back') === false) {
         spinLetter(card);
         counter++;
-
-        if (selectedStatus === false) {
+        
+        if(selectedStatus === false) {
             chosenLetter = card;
             selectedStatus = true;
-        }
 
-        else if (chosenLetter.classList[1] !== card.classList[1]) {
+        } else if(chosenLetter.classList[1] !== card.classList[1]) {
             selectedStatus = false;
             setTimeout(spinLetter, 1000, chosenLetter);
             setTimeout(spinLetter, 1000, card);
             chosenLetter = null;
-        }
 
-        else {
+        } else {
             selectedStatus = false;
             equalLetter.push(card.classList[1]);
+
+        } if(equalLetter.length === amountPairs) {
+            clearTimeout(time);
+            setTimeout(alert('END'),1000);
         }
     }
 }
@@ -87,4 +97,9 @@ function spinLetter(card) {
     frontFace.classList.toggle('selected-front');
     const backFace = card.querySelector('.back-face');
     backFace.classList.toggle('selected-back');
+}
+
+function timeCounter() {
+    const clock = document.querySelector('.clock');
+    clock.innerHTML = parseInt(clock.innerHTML) + 1;
 }

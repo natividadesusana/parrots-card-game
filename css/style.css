@@ -73,14 +73,6 @@ main {
   transform: rotateY(-180deg);
 }
 
-/* .card:hover .back-face {
-  transform: rotateY(0deg);
-}
-
-.card:hover .front-face {
-  transform: rotateY(-180deg);
-} */
-
 .front-face img {
   height: 100px;
   margin: 10px;
@@ -89,4 +81,12 @@ main {
 .back-face img {
   height: 100px;
   margin: 10px;
+}
+
+.clock {
+    color: rgb(213, 163, 62);
+    font-family: "Roboto", sans-serif;
+    margin-left: 800px;
+    font-size: 40px;
+    position: absolute;
 }
