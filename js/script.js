@@ -63,7 +63,7 @@ startGame()
 
 function clickLetter(card) {
     const backFace = card.querySelector('.back-face');
-    
+ 
     if (counter == 0) {
         time = setInterval(timeCounter, 1000);
     }
@@ -74,8 +74,7 @@ function clickLetter(card) {
         if(selectedStatus === false) {
             chosenLetter = card;
             selectedStatus = true;
-
-        } else if(chosenLetter.classList[1] !== card.classList[1]) {
+        } else if(chosenLetter.innerHTML !== card.innerHTML) {
             selectedStatus = false;
             setTimeout(spinLetter, 1000, chosenLetter);
             setTimeout(spinLetter, 1000, card);
@@ -87,10 +86,12 @@ function clickLetter(card) {
 
         } if(equalLetter.length === amountPairs) {
             clearTimeout(time);
-            setTimeout(alert('END'),1000);
+            setTimeout(alert('game over'), 1000);
         }
+        console.log(chosenLetter)
     }
 }
+console.log(clickLetter())
 
 function spinLetter(card) {
     const frontFace = card.querySelector('.front-face');
