@@ -16,7 +16,7 @@ let selectedStatus = false;
 
 let chosenLetter = null;
 
-let equalLetter = []
+let equalLetter = [];
 
 let amountLetters = null;
 
@@ -52,55 +52,57 @@ function startGame() {
                 ${cards[i]}
             </div>
         </div>`
-    }
-}
+    };
+};
 
 function randomLetters() {
     return Math.random() - 0.5;
-}
+};
 
 startGame()
 
 function clickLetter(card) {
+
     const backFace = card.querySelector('.back-face');
  
     if (counter == 0) {
         time = setInterval(timeCounter, 1000);
-    }
+    };
+
     if (backFace.classList.contains('.selected-back') === false) {
         spinLetter(card);
-        counter++;
-        
-        if(selectedStatus === false) {
+        counter++;        
+        if (selectedStatus === false) {
             chosenLetter = card;
             selectedStatus = true;
-        } else if(chosenLetter.innerHTML !== card.innerHTML) {
+        } else if (chosenLetter.innerHTML !== card.innerHTML) {
             selectedStatus = false;
             setTimeout(spinLetter, 1000, chosenLetter);
             setTimeout(spinLetter, 1000, card);
             chosenLetter = null;
-
         } else {
             selectedStatus = false;
             equalLetter.push(card.classList[1]);
-
-        } if(equalLetter.length === amountPairs) {
+        } if (equalLetter.length === amountPairs) {
             clearTimeout(time);
-            setTimeout(alert('game over'), 1000);
-        }
-        console.log(chosenLetter)
-    }
-}
-console.log(clickLetter())
+            setTimeout(endGame, 1000);
+        };
+    };
+};
 
 function spinLetter(card) {
     const frontFace = card.querySelector('.front-face');
     frontFace.classList.toggle('selected-front');
     const backFace = card.querySelector('.back-face');
     backFace.classList.toggle('selected-back');
-}
+};
 
 function timeCounter() {
     const clock = document.querySelector('.clock');
     clock.innerHTML = parseInt(clock.innerHTML) + 1;
-}
+};
+
+function endGame() {
+    const clock = document.querySelector('.clock');
+    alert(`🎉 Você ganhou em ${counter} jogadas! A duração do jogo foi de ${clock.innerHTML} segundos!`);
+};
