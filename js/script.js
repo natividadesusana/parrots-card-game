@@ -23,7 +23,7 @@ let amountLetters = null;
 let amountPairs = null;
 
 function startGame() {
-   
+
     let amountLetters = parseInt(prompt(`🔹 Com quantas cartas deseja jogar?
     🔺 Obs: Digite um número par entre 4 e 14!`));
 
@@ -31,14 +31,14 @@ function startGame() {
         amountLetters = parseInt(prompt(`🔺 Atenção!!
     ➡️ Digite um número par entre 4 e 14!`));
     };
-    
+
     gifts.sort(randomLetters);
 
     for (let i = 0; i < (amountLetters / 2); i++) {
         cards.push(gifts[i], gifts[i]);
     };
-  
-    amountPairs = amountLetters/2;
+
+    amountPairs = amountLetters / 2;
     cards.sort(randomLetters);
 
     for (let i = 0; i < amountLetters; i++) {
@@ -64,14 +64,14 @@ startGame()
 function clickLetter(card) {
 
     const backFace = card.querySelector('.back-face');
- 
+
     if (counter == 0) {
         time = setInterval(timeCounter, 1000);
     };
 
     if (backFace.classList.contains('.selected-back') === false) {
         spinLetter(card);
-        counter++;        
+        counter++;
         if (selectedStatus === false) {
             chosenLetter = card;
             selectedStatus = true;
@@ -106,3 +106,5 @@ function endGame() {
     const clock = document.querySelector('.clock');
     alert(`🎉 Você ganhou em ${counter} jogadas! A duração do jogo foi de ${clock.innerHTML} segundos!`);
 };
+
+
