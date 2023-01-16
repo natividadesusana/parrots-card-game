@@ -4,7 +4,6 @@ body {
 
 header {
   width: 100%;
-  margin-top: 40px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -84,27 +83,34 @@ main {
 }
 
 .clock {
-  color: rgb(213, 163, 62);
+  color: #86BD8D;
   font-family: "Roboto", sans-serif;
-  margin-left: 800px;
-  font-size: 40px;
+  margin-right: 20px;
+  margin-top: 20px;
+  font-weight: 700;
+  font-size: 36px;
   position: absolute;
 }
 
+.container {
+  height: 50px;
+  display: flex;
+  justify-content: right;
+  align-items: center;
+}
+
 @media (max-width: 600px) {
+  
   header h1 {
     width: 312px;
     font-size: 36px;
     line-height: 42.19px;
     text-align: center;
+    margin-top: 20px;
     margin-bottom: -40px;
   }
 
   .box-cards {
     flex-direction: column;
-  }
-
-  .clock {
-    display: none;
   }
 }

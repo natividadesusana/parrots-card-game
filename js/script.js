@@ -103,8 +103,23 @@ function timeCounter() {
 };
 
 function endGame() {
+
     const clock = document.querySelector('.clock');
+
     alert(`🎉 Você ganhou em ${counter} jogadas! A duração do jogo foi de ${clock.innerHTML} segundos!`);
+
+    let restart = prompt('Deseja reiniciar a partida? (sim/não)');
+
+    while(restart !== 'sim' && restart !== 'não') {
+       restart = prompt('Digite [sim] ou [não]:');
+    };
+    if (restart === 'sim') {
+       location.reload(true);
+    } else {
+        alert(`Obrigada por jogar Parrot Card Game!
+    💚 Até Logo!`)
+    };
+      
 };
 
 
