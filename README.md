@@ -27,7 +27,7 @@
     
 #### Requirements for the Bonus:
 
-    - Clock
+- Clock
      - [ ] Place a clock at the top right of the screen, counting how many seconds have passed since the start of the game.
      - [ ] At the end of the game, the victory message must be added to the time the user took to finish the game, in the following format: `You won in X moves! The duration of the game was Y seconds!`.
 - Game restart
@@ -41,6 +41,13 @@ _____
 
 ### Desktop Layout
 
+<img width="1439" alt="Captura de Tela 2023-01-16 às 16 18 44" src="https://user-images.githubusercontent.com/95102911/212752423-50213cba-4e0d-4818-808f-681ad2e30b75.png">
+
+<img width="1437" alt="Captura de Tela 2023-01-16 às 16 19 46" src="https://user-images.githubusercontent.com/95102911/212752431-eb29d2dd-40ca-4fee-a717-bf0239710c53.png">
 
 ### Mobile Layout
+
+<img width="392" alt="Captura de Tela 2023-01-16 às 16 22 54" src="https://user-images.githubusercontent.com/95102911/212752605-00e1b09f-2a73-4e41-a21b-256013b4ffaf.png">
+
+<img width="393" alt="Captura de Tela 2023-01-16 às 16 23 13" src="https://user-images.githubusercontent.com/95102911/212752619-5a677075-4683-4d6d-802e-b9371f0423b7.png">
 
