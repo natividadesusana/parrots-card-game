@@ -111,7 +111,8 @@ function endGame() {
     let restart = prompt('Deseja reiniciar a partida? (sim/não)');
 
     while(restart !== 'sim' && restart !== 'não') {
-       restart = prompt('Digite [sim] ou [não]:');
+       restart = prompt(`🔺 Atenção!!
+    ➡️ Digite [sim] ou [não]!`);
     };
     if (restart === 'sim') {
        location.reload(true);
