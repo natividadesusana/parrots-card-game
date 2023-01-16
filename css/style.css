@@ -4,7 +4,7 @@ body {
 
 header {
   width: 100%;
-  margin-top: 50px;
+  margin-top: 40px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -65,11 +65,11 @@ main {
   transform: rotateY(180deg);
 }
 
-.selected-back  {
+.selected-back {
   transform: rotate(0deg);
 }
 
-.selected-front  {
+.selected-front {
   transform: rotateY(-180deg);
 }
 
@@ -84,9 +84,27 @@ main {
 }
 
 .clock {
-    color: rgb(213, 163, 62);
-    font-family: "Roboto", sans-serif;
-    margin-left: 800px;
-    font-size: 40px;
-    position: absolute;
+  color: rgb(213, 163, 62);
+  font-family: "Roboto", sans-serif;
+  margin-left: 800px;
+  font-size: 40px;
+  position: absolute;
+}
+
+@media (max-width: 600px) {
+  header h1 {
+    width: 312px;
+    font-size: 36px;
+    line-height: 42.19px;
+    text-align: center;
+    margin-bottom: -40px;
+  }
+
+  .box-cards {
+    flex-direction: column;
+  }
+
+  .clock {
+    display: none;
+  }
 }
