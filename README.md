@@ -1,4 +1,4 @@
-# Project developed for Bootcamp Driven Education
+# Card Game Project
 
 #### Requirements for the project:
 
