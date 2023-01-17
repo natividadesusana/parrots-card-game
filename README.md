@@ -45,6 +45,8 @@ _____
 
 <img width="1437" alt="Captura de Tela 2023-01-16 às 16 19 46" src="https://user-images.githubusercontent.com/95102911/212752431-eb29d2dd-40ca-4fee-a717-bf0239710c53.png">
 
+_____
+
 ### Mobile Layout
 
 <img width="392" alt="Captura de Tela 2023-01-16 às 16 22 54" src="https://user-images.githubusercontent.com/95102911/212752605-00e1b09f-2a73-4e41-a21b-256013b4ffaf.png">
