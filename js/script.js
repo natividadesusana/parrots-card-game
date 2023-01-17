@@ -1,5 +1,6 @@
 const cards = [];
 
+/* Back of cards pictures */
 const gifts = [
     `<img data-test="face-down-image" src="/img/christmas.gif">`,
     `<img data-test="face-down-image" src="/img/discord.gif">`,
@@ -22,6 +23,7 @@ let amountLetters = null;
 
 let amountPairs = null;
 
+/* Starting the game */
 function startGame() {
 
     let amountLetters = parseInt(prompt(`🔹 Com quantas cartas deseja jogar?
@@ -40,7 +42,8 @@ function startGame() {
 
     amountPairs = amountLetters / 2;
     cards.sort(randomLetters);
-
+    
+     /* Distribution of letters */
     for (let i = 0; i < amountLetters; i++) {
         const box = document.querySelector('.box-cards');
         box.innerHTML += `
@@ -55,12 +58,14 @@ function startGame() {
     };
 };
 
+/* Shuffling cards */
 function randomLetters() {
     return Math.random() - 0.5;
 };
 
 startGame()
 
+/* Click on the letter */
 function clickLetter(card) {
 
     const backFace = card.querySelector('.back-face');
@@ -90,6 +95,7 @@ function clickLetter(card) {
     };
 };
 
+/* Turning the card */
 function spinLetter(card) {
     const frontFace = card.querySelector('.front-face');
     frontFace.classList.toggle('selected-front');
@@ -97,11 +103,13 @@ function spinLetter(card) {
     backFace.classList.toggle('selected-back');
 };
 
+/* Creating clock */
 function timeCounter() {
     const clock = document.querySelector('.clock');
     clock.innerHTML = parseInt(clock.innerHTML) + 1;
 };
 
+/* Ending and restarting game */
 function endGame() {
 
     const clock = document.querySelector('.clock');

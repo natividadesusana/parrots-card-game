@@ -1,6 +1,10 @@
+/* body of the page */
+
 body {
   background-color: #eef9bf;
 }
+
+/* title header */
 
 header {
   width: 100%;
@@ -20,6 +24,8 @@ header h1 {
   align-items: center;
 }
 
+/* main container */
+
 main {
   width: 100%;
   margin-top: 50px;
@@ -27,6 +33,8 @@ main {
   justify-content: center;
   align-items: center;
 }
+
+/* box of letters */
 
 .box-cards {
   width: 1000px;
@@ -72,6 +80,8 @@ main {
   transform: rotateY(-180deg);
 }
 
+/* image of cards */
+
 .front-face img {
   height: 100px;
   margin: 10px;
@@ -81,6 +91,8 @@ main {
   height: 100px;
   margin: 10px;
 }
+
+/* clock layout */
 
 .clock {
   color: #86BD8D;
@@ -92,6 +104,8 @@ main {
   position: absolute;
 }
 
+/* watch container */
+
 .container {
   height: 50px;
   display: flex;
@@ -99,8 +113,10 @@ main {
   align-items: center;
 }
 
+/* layout mobile */
+
 @media (max-width: 600px) {
-  
+
   header h1 {
     width: 312px;
     font-size: 36px;
