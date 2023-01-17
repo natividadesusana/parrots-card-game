@@ -2,13 +2,13 @@ const cards = [];
 
 /* Back of cards pictures */
 const gifts = [
-    `<img data-test="face-down-image" src="/img/christmas.gif">`,
-    `<img data-test="face-down-image" src="/img/discord.gif">`,
-    `<img data-test="face-down-image" src="/img/ghibli.gif">`,
-    `<img data-test="face-down-image" src="/img/pooh.gif">`,
-    `<img data-test="face-down-image" src="/img/spinner.gif">`,
-    `<img data-test="face-down-image" src="/img/sticker.gif">`,
-    `<img data-test="face-down-image" src="/img/bird.gif">`
+    `<img data-test="face-up-image" src="/img/christmas.gif">`,
+    `<img data-test="face-up-image" src="/img/discord.gif">`,
+    `<img data-test="face-up-image" src="/img/ghibli.gif">`,
+    `<img data-test="face-up-image" src="/img/pooh.gif">`,
+    `<img data-test="face-up-image" src="/img/spinner.gif">`,
+    `<img data-test="face-up-image" src="/img/sticker.gif">`,
+    `<img data-test="face-up-image" src="/img/bird.gif">`
 ];
 
 let counter = 0;
@@ -49,7 +49,7 @@ function startGame() {
         box.innerHTML += `
         <div data-test="card" class="card" onclick="clickLetter(this)">
             <div class="front-face face">
-                <img data-test="face-up-image" src="img/back.png">
+                <img data-test="face-down-image" src="img/back.png">
             </div>
             <div class="back-face face">
                 ${cards[i]}
