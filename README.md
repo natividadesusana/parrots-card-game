@@ -1,5 +1,14 @@
 # Card Game Project
 
+
+### *Desktop Layout*
+
+<img width="1439" alt="Captura de Tela 2023-01-16 às 16 18 44" src="https://user-images.githubusercontent.com/95102911/212752423-50213cba-4e0d-4818-808f-681ad2e30b75.png">
+
+<img width="1437" alt="Captura de Tela 2023-01-16 às 16 19 46" src="https://user-images.githubusercontent.com/95102911/212752431-eb29d2dd-40ca-4fee-a717-bf0239710c53.png">
+
+_____
+
 #### Requirements for the project:
 
 - General
@@ -39,15 +48,8 @@
 
 _____
 
-### Desktop Layout
 
-<img width="1439" alt="Captura de Tela 2023-01-16 às 16 18 44" src="https://user-images.githubusercontent.com/95102911/212752423-50213cba-4e0d-4818-808f-681ad2e30b75.png">
-
-<img width="1437" alt="Captura de Tela 2023-01-16 às 16 19 46" src="https://user-images.githubusercontent.com/95102911/212752431-eb29d2dd-40ca-4fee-a717-bf0239710c53.png">
-
-_____
-
-### Mobile Layout
+### *Mobile Layout*
 
 <img width="392" alt="Captura de Tela 2023-01-16 às 16 22 54" src="https://user-images.githubusercontent.com/95102911/212752605-00e1b09f-2a73-4e41-a21b-256013b4ffaf.png">
 
