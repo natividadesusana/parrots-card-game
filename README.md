@@ -41,5 +41,5 @@ In addition to the main features, the game also includes the following bonus fea
 - Add sound effects and music to the game
 - Improve the design and user experience of the game.
 
-## How to contribute
+## How to Contribute
 Contributions are always welcome! If you find any bugs or have suggestions for new features, feel free to open an issue or pull request.
